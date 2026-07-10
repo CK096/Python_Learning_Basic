@@ -1,9 +1,13 @@
-# .upper()     # 全部大写
-# .lower()     # 全部小写
-# .strip()     # 去除前后空格
-# .count()     # 计算有多少一样的字符串
-# .replace()   # 替换文字
-# .split()     # 切割字符串成列表
+# ==============================
+# String Methods
+# ==============================
+
+# .upper()        全部转大写
+# .lower()        全部转小写
+# .strip()        去除前后空白
+# .replace()      替换指定文字
+# .split()        切割字串，回传 List
+# .count()        计算指定字串出现次数
 
 text = "    Banana,Apple,Orange,Apple    "
 
@@ -11,16 +15,23 @@ print(text.upper())
 print(text.lower())
 print(text.strip())
 print(text.replace("Apple","Grape"))
-print(text.split(","))
 print(text.count("Apple"))
+print(text.split(","))
 print(text.upper().lower().strip().replace("apple","Grape").split(","))
 #可以同时使用多个字符串处理功能(左到右)
 
-#####################################################################################
+# ==============================
+# Built-in Function
+# ==============================
 
-#.len()#计算有多少字
-#.startswith()#开头带有什么字
-#.endswith()#结尾带有什么字
+# len()           计算长度（字元数）
+
+# ==============================
+# Boolean Methods
+# ==============================
+
+# .startswith()   是否以指定文字开头
+# .endswith()     是否以指定文字结尾
 
 new = "Python"
 print(len(new))
@@ -42,4 +53,4 @@ if file.endswith(".py"):
 if url.startswith("https://"):
     print("Secure Website")
   
-#检查是不是网址或者哪个格式的文件也可以用得到
+# 常用来检查网址、文件格式、文件副档名等。
