@@ -5,17 +5,18 @@
 # .upper()        全部转大写
 # .lower()        全部转小写
 # .capitalize()   第一个字串换成大写
+# .title()        每个单字首字母大写，其余小写
 # .strip()        去除前后空白
 # .replace()      替换指定文字
 # .split()        切割字串，回传 List
 # .count()        计算指定字串出现次数
-
 
 text = "    Banana,Apple,Orange,Apple    "
 
 print(text.upper())
 print(text.lower())
 print(text.capitalize())
+print(text.title())
 print(text.strip())
 print(text.replace("Apple","Grape"))
 print(text.count("Apple"))
