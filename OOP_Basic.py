@@ -1,0 +1,94 @@
+class Student:
+    # Class（类）
+    # Student 是一个模板，用来创建学生 Object
+
+    def __init__(self, name, age, score):
+        # __init__ = 初始化
+        # 创建 Student Object 时会自动执行
+        # self = 当前的 Object
+
+        self.name = name
+        # self.name = Attribute（属性）
+        # 把传进来的 name 储存到这个 Object
+
+        self.age = age
+        # 储存年龄
+
+        self.score = score
+        # 储存分数
+
+
+    def introduce(self):
+        # Method（方法）
+        # 用来显示学生资料
+
+        print(f"Name: {self.name}")
+        print(f"Age: {self.age}")
+        print(f"Score: {self.score}")
+
+
+    def change_name(self, new_name):
+        # Method：修改名字
+        # new_name 是传进来的新名字
+
+        self.name = new_name
+        # 把 Object 原本的名字修改成新名字
+
+        self.introduce()
+        # 可以在一个 Method 里面调用另一个 Method
+        # 这里不是必要的，只是修改名字后顺便显示资料
+
+
+    def add_score(self, amount):
+        # Method：增加 / 减少分数
+        # amount 可以是正数，也可以是负数
+
+        new_score = self.score + amount
+        # 先计算修改后的分数
+        # 例如：100 + 15 = 115
+        # 例如：87 + (-30) = 57
+
+        if new_score < 0:
+            # 检查分数有没有小于 0
+
+            print("Score Cant Be Negative")
+            # 如果小于 0，不允许修改
+
+        else:
+            self.score = new_score
+            # 如果没有问题，才真正修改分数
+
+
+# Object（对象）
+# 根据 Student Class 创建两个不同的 Object
+
+student1 = Student("Ck", 27, 100)
+# student1 是一个 Student Object
+# name = Ck
+# age = 27
+# score = 100
+
+student2 = Student("Lim", 25, 87)
+# student2 也是 Student Object
+# 但是资料和 student1 独立
+
+
+student1.add_score(15)
+# self = student1
+# 100 + 15 = 115
+
+student2.add_score(-30)
+# self = student2
+# 87 + (-30) = 57
+
+
+student1.change_name("Kok")
+# self = student1
+# 把 student1 的名字 Ck 改成 Kok
+
+
+student1.introduce()
+# 显示 student1 的资料
+
+student2.introduce()
+# 显示 student2 的资料
