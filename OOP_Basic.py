@@ -17,6 +17,25 @@ class Student:
         self.score = score
         # 储存分数
 
+    def __str__(self):
+        return (f"Name: {self.name}\n"
+                f"Age: {self.age}\n"
+                f"Score: {self.score}")
+        # __str__ = 特殊方法 (推荐使用这个)
+        # 作用：规定 print(Object) 时，要显示什么文字
+        # 必须 return 一个字符串，不能直接 print
+
+        # 有了 __str__ 后：
+        # print(student1)
+        # Python 会自动调用 student1.__str__()
+        # 然后显示 return 回来的字符串
+
+        # 如果没有 __str__：
+        # print(student1)
+        # 可能会显示：
+        # <__main__.Student object at 0x000001C2366BE3F0>
+        # 这是 Python 默认的 Object 显示方式，不容易看懂
+
 
     def introduce(self):
         # Method（方法）
@@ -90,5 +109,5 @@ student1.change_name("Kok")
 student1.introduce()
 # 显示 student1 的资料
 
-student2.introduce()
-# 显示 student2 的资料
+print(student1)
+# 会自动调用 __str__()
