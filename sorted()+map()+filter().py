@@ -28,3 +28,13 @@ number = [1,2,3,4]
 result = map(lambda x: x*2, number) #map()是用什么函数来改变资料,所以函数在前面
 
 print(list(result)) #list()会吧结果变成list,因为result不算list
+
+================================================================================================
+
+# filter 每一个都检查，符合条件的才留下
+
+numbers = [1, 2, 3, 4, 5, 6]
+
+result = list(filter(lambda x: x % 2 ==0,numbers)) #list()也可以这样用，看个人喜欢
+
+print(result)
