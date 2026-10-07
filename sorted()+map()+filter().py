@@ -38,3 +38,28 @@ numbers = [1, 2, 3, 4, 5, 6]
 result = list(filter(lambda x: x % 2 ==0,numbers)) #list()也可以这样用，看个人喜欢
 
 print(result)
+
+================================================================================================
+sorted()
+↓
+排序
+↓
+直接给你 List
+
+
+map()
+↓
+一个个处理
+↓
+map object
+↓
+list() → List
+
+
+filter()
+↓
+一个个检查
+↓
+filter object
+↓
+list() → List
