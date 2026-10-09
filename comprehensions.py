@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 """
 Python 推导式笔记（Comprehensions）
-适合初学者复习，可保存到 GitHub。
 
 内容：
 1. List Comprehension（列表推导式）
