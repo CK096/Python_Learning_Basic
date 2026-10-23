@@ -13,6 +13,10 @@ print(users) # 会回传 <zip object at 0x0000026DB3DEE040>
 for user in users:
     print(user)
 
+#如果没有users的话这样也直接可以用
+for a, b in zip(usernames,passwords):
+    print(f"name: {a}, password {b}")
+
 #换成List
 print(list(users)) #可以得到List (需要先#注解掉之前的迭代出的tuple)
 
