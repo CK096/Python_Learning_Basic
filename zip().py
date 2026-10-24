@@ -30,3 +30,12 @@ for key,value in user_dict.items():
 
 #如果 usernames 或 passwords 里面少掉其中一组号码或者名字， 显示出来的List,Tuple,Dict 就会少一组
 #如果有第三行 List/Tuple exp: zip(usernames, passwords,birthdays), 这样的情况下Dict 会报错
+
+
+#exp enumarate
+students = ["Alex", "Ben", "Chris", "David", "Amy"]
+scores = [80, 45, 90, 35, 55]
+
+for index, (x, y) in enumerate(zip(students,scores),start=1): #代表索引从1开始
+    if y < 60:
+        print(index, x, y)
