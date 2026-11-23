@@ -70,3 +70,14 @@ x = x*y
 y = x+x
 print(y)
 print(type(y))
+
+#====================================================
+
+# input 取得使用者输入
+item = input("想要购买的物品： ")
+price = float(input("购买物品的价格： ")) #float(input()) 当输入需要小数点的时候
+quantity = int(input("购买物品的数量： ")) #int(input()) 当输入需要整数的时候
+
+total = price * quantity
+
+print(f'你购买了{quantity} {item},总价值 RM{total}')
