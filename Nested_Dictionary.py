@@ -17,3 +17,21 @@ students["student1"]["score"] = 70
 
 # 新增资料
 students["student1"]["Class"] = "1A"
+
+
+# Dictionary 里面再放List
+students = {
+    "John": [80, 75, 90],
+    "Mary": [95, 88, 92],
+    "Tom": [60, 70, 65],
+    "Lisa": [85, 90, 95]
+}
+
+high_average = 0
+
+for key, value in students.items():
+    average = sum(value)/len(value) #拿list的值来用
+    print(f"Student: {key}, Average Score: {average:.2f}")
+    if average >= 80:
+        high_average += 1
+print("Average Score Students More Then 80 Have",high_average,"People")
