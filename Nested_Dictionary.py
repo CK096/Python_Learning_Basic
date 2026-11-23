@@ -35,7 +35,7 @@ for key, value in students.items():
     print(f"Student: {key}, Average Score: {average:.2f}")
     if average >= 80:
         high_average += 1
-print("Average Score Students More Then 80 Have",high_average,"People")
+print("Average Score Students More Than 80 Have",high_average,"People")
 
 #=========================================================================
 
