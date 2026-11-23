@@ -36,3 +36,17 @@ for key, value in students.items():
     if average >= 80:
         high_average += 1
 print("Average Score Students More Then 80 Have",high_average,"People")
+
+#=========================================================================
+
+# 把Dictionary 放进 Dictionary : list 里面
+scores = {"Alice": 85,"Bob": 55,"Charlie": 92,"David": 48,"Emma": 70}
+result = {"Pass": [],"Fail": []}
+
+for key, value in scores.items():
+    if value >= 60:
+        result["Pass"].append(value)
+    else:
+        result["Fail"].append(value)
+
+print(result)
