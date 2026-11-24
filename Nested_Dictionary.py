@@ -50,3 +50,33 @@ for key, value in scores.items():
         result["Fail"].append(value)
 
 print(result)
+
+
+#========================================================================
+
+#Big Example
+
+products = {
+    "Laptop": {"price": 3500, "stock": 5},
+    "Mouse": {"price": 50, "stock": 0},
+    "Keyboard": {"price": 150, "stock": 10},
+    "Monitor": {"price": 800, "stock": 3},
+    "Phone": {"price": 2000, "stock": 0}
+}
+
+have_stock = 0
+total= 0
+
+for key,value in products.items():
+    if value["stock"] > 0:
+        have_stock += 1
+        total += value["price"] * value["stock"]
+        print(f"{key} : RM{value["price"]}")
+
+print(f"Have Stock Item : {have_stock}, Total Value : RM {total}")
+
+
+
+
+
+
